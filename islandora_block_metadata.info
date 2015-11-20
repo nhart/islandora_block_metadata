@@ -1,0 +1,7 @@
+name = "Islandora Block Metadata"
+description = "Allows blocks to be used to display metadata"
+dependencies[] = block
+dependencies[] = islandora
+package = Islandora
+version = 7.x-dev
+core = 7.x

@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Defines all the hooks this module implements.
+ */
+
+/**
+ * Implements hook_islandora_metadata_display_info().
+ */
+function islandora_block_metadata_islandora_metadata_display_info() {
+  return array(
+    'islandora_block_metadata' => array(
+      'label' => t('Islandora Block Metadata'),
+      'description' => t('Metadata display driven by the Block module'),
+      'metadata callback' => 'islandora_block_metadata_display_callback',
+      'description callback' => 'islandora_block_metadata_description_callback',
+      'configuration' => '',
+    ),
+  );
+}
+
+/**
+ * Metadata display callback for rendering metadata from the Block Module.
+ *
+ * @param AbstractObject $object
+ *   An AbstractObject representing an object within Fedora.
+ * @param bool $print
+ *   Whether this is for printing purposes.
+ *
+ * @return string
+ *   Markup representing the metadata display pulled from the Block Module.
+ */
+function islandora_block_metadata_display_callback(AbstractObject $object, $print = FALSE) {
+  return 'islandora_block_metadata_display_callback';
+}
+
+
+/**
+ * Metadata display callback for rendering metadata from the Block Module.
+ *
+ * @param AbstractObject $object
+ *   An AbstractObject representing an object within Fedora.
+ *
+ * @return string
+ *   Markup representing the metadata display pulled from the Block Module.
+ */
+function islandora_block_metadata_description_callback(AbstractObject $object) {
+  return 'islandora_block_metadata_description_callback';
+}
